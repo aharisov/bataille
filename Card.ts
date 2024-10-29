@@ -1,20 +1,11 @@
-import { CardColor } from "./CardColor";
-import { CardValue } from "./CardValue";
+import { Symbol } from "./Symbol";
+import { Value } from "./Value";
 
 export class Card {
-    color: CardColor;
-    value: CardValue;
+    private val: Value;
+    private sign: Symbol;
 
-    constructor(color: CardColor, value: CardValue) {
-        this.color = color,
-        this.value = value
-    }
-
-    public getColor(): CardColor {
-        return this.color;
-    }
-
-    public getValue(): CardValue {
-        return this.value;
+    public display(): string {
+        return '';
     }
 }

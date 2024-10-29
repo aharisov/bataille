@@ -1,29 +1,24 @@
 import { Card } from "./Card";
+import { Deck } from "./Deck";
 
 export class Player {
-    name: string;
-    cards: Card[];
-
-    constructor(name: string, cards: Card[]) {
-        this.name = name,
-        this.cards = cards
-    }
+    private name: string;
+    private hand: Card[];
+    private deck: Deck;
 
     public getName(): string {
         return this.name;
     }
 
-    public getCards(): Card[] {
-        return this.cards;
+    public play() {}
+
+    public retreiveCards(d: Deck): Deck {
+        return;
     }
 
-    public addCards(newCards: Card[]): void {
-        for (let card of newCards) {
-            this.cards.unshift(card);
-        }
+    public getNbCards(): number {
+        return 0;
     }
 
-    public getTopCard(): Card {
-        return this.cards.pop();
-    }
+
 }
